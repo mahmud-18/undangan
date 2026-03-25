@@ -17,14 +17,14 @@ export default function LoveStory() {
       id="lovestory"
       className="relative py-24 px-6 overflow-hidden"
       style={{
-        background: `linear-gradient(to bottom, rgba(10,10,10,0.7) 0%, rgba(10,10,10,0.3) 35%, rgba(10,10,10,0.4) 65%, rgba(10,10,10,0.75) 100%), url('/images/lovestory.jpg') center/cover no-repeat`,
+        background: `linear-gradient(to bottom, rgba(10,10,10,0.7) 0%, rgba(10,10,10,0.3) 35%, rgba(10,10,10,0.4) 65%, rgba(0, 0, 0, 0.31) 100%), url('/images/lovestory.jpg') center/cover no-repeat`,
       }}
     >
       {/* Blush glow overlay */}
       <div
         className="absolute inset-0 pointer-events-none z-0"
         style={{
-          background: `radial-gradient(ellipse at 50% 30%, rgba(196,117,138,0.08) 0%, transparent 65%)`,
+          background: `radial-gradient(ellipse at 50% 30%, rgba(196, 117, 138, 0.16) 0%, transparent 65%)`,
         }}
       />
 

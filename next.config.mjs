@@ -8,6 +8,8 @@ const nextConfig = {
         hostname: '**',
       },
     ],
+
+    unoptimized:true,
   },
   reactCompiler: true,
 };

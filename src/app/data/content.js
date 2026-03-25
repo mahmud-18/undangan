@@ -74,17 +74,17 @@ export const weddingData = {
 ],
 
   gallery: [
-    '/images/gallery/15.jpeg',
-    '/images/gallery/16.jpeg',
-    '/images/gallery/17.jpeg',
-    '/images/gallery/18.jpeg',
-    '/images/gallery/19.jpeg',
-    '/images/gallery/20.jpeg',
-    '/images/gallery/21.jpeg',
-    '/images/gallery/22.jpeg',
-    '/images/gallery/23.jpeg',
-    '/images/gallery/24.jpeg',
-    '/images/gallery/25.jpeg',
+    '/gallery/15.JPEG',
+    '/gallery/16.JPEG',
+    '/gallery/17.JPEG',
+    '/gallery/18.JPEG',
+    '/gallery/19.JPEG',
+    '/gallery/20.JPEG',
+    '/gallery/21.JPEG',
+    '/gallery/22.JPEG',
+    '/gallery/23.JPEG',
+    '/gallery/24.JPEG',
+    '/gallery/25.JPEG',
     
   ],
 
@@ -97,6 +97,12 @@ export const weddingData = {
       bank: 'BCA',
       accountNumber: '1380795651',
       accountName: 'Haifa',
+    },
+
+    {
+      bank: 'QRIS',
+      qrImage: '/images/qris.jpeg',
+      accountName: 'Fahmi Nurbillad',
     },
   ],
 

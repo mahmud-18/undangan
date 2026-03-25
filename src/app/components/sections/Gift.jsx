@@ -79,39 +79,56 @@ export default function Gift() {
               <div className="p-6">
                 {/* Bank name */}
                 <p className="text-white/40 text-xs font-sans tracking-[0.3em] uppercase mb-2">
-                  Bank {gift.bank}
+                  {gift.bank === 'QRIS' ? 'QRIS' : `Bank ${gift.bank}`}
                 </p>
 
-                {/* Account number */}
-                <div className="flex items-center justify-between gap-4 mb-3">
-                  <p className="font-serif text-white text-2xl font-light tracking-widest">
-                    {gift.accountNumber}
-                  </p>
-                  <button
-                    onClick={() => handleCopy(gift.accountNumber, i)}
-                    className="flex items-center gap-1.5 border border-white/20 px-3 py-1.5 text-white/50 text-xs font-sans tracking-wider hover:bg-white/10 hover:text-white/80 hover:border-white/40 transition-all duration-300 rounded-lg flex-shrink-0"
-                  >
-                    {copied === i ? (
-                      <>
-                        <svg width="11" height="11" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
-                          <path d="M20 6L9 17l-5-5" />
-                        </svg>
-                        Copied!
-                      </>
-                    ) : (
-                      <>
-                        <svg width="11" height="11" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5">
-                          <rect x="9" y="9" width="13" height="13" rx="2" />
-                          <path d="M5 15H4a2 2 0 01-2-2V4a2 2 0 012-2h9a2 2 0 012 2v1" />
-                        </svg>
-                        Salin
-                      </>
-                    )}
-                  </button>
-                </div>
+                {/* Content */}
+                {gift.bank === 'QRIS' ? (
+                  <div className="flex flex-col items-center gap-4">
+                    <img
+                      src={gift.qrImage}
+                      alt="QRIS"
+                      className="w-full max-w-[240px] rounded-xl border border-white/10"
+                    />
+                    <p className="text-white/50 text-sm font-sans">
+                      a.n. {gift.accountName}
+                    </p>
+                  </div>
+                ) : (
+                  <>
+                    <div className="flex items-center justify-between gap-4 mb-3">
+                      <p className="font-serif text-white text-2xl font-light tracking-widest">
+                        {gift.accountNumber}
+                      </p>
 
-                {/* Account name */}
-                <p className="text-white/50 text-sm font-sans">a.n. {gift.accountName}</p>
+                      <button
+                        onClick={() => handleCopy(gift.accountNumber, i)}
+                        className="flex items-center gap-1.5 border border-white/20 px-3 py-1.5 text-white/50 text-xs font-sans tracking-wider hover:bg-white/10 hover:text-white/80 hover:border-white/40 transition-all duration-300 rounded-lg flex-shrink-0"
+                      >
+                        {copied === i ? (
+                          <>
+                            <svg width="11" height="11" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
+                              <path d="M20 6L9 17l-5-5" />
+                            </svg>
+                            Copied!
+                          </>
+                        ) : (
+                          <>
+                            <svg width="11" height="11" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5">
+                              <rect x="9" y="9" width="13" height="13" rx="2" />
+                              <path d="M5 15H4a2 2 0 01-2-2V4a2 2 0 012-2h9a2 2 0 012 2v1" />
+                            </svg>
+                            Salin
+                          </>
+                        )}
+                      </button>
+                    </div>
+
+                    <p className="text-white/50 text-sm font-sans">
+                      a.n. {gift.accountName}
+                    </p>
+                  </>
+                )}
               </div>
             </motion.div>
           ))}
