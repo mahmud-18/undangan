@@ -1,0 +1,66 @@
+@import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;1,300;1,400&family=Jost:wght@300;400;500&display=swap');
+
+@import "tailwindcss";
+
+:root {
+  --cream: #f5f0eb;
+  --beige: #e8e0d5;
+  --brown: #8b6f5e;
+  --brown-dark: #5c4033;
+  --text: #3d2b1f;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  background-color: var(--cream);
+  color: var(--text);
+  font-family: 'Jost', sans-serif;
+  font-weight: 300;
+  overflow-x: hidden;
+}
+
+h1, h2, h3, h4, h5 {
+  font-family: 'Cormorant Garamond', serif;
+}
+
+::-webkit-scrollbar {
+  width: 4px;
+}
+::-webkit-scrollbar-track {
+  background: var(--cream);
+}
+::-webkit-scrollbar-thumb {
+  background: var(--brown);
+  border-radius: 2px;
+}
+
+.divider {
+  width: 60px;
+  height: 1px;
+  background-color: var(--brown);
+  margin: 1rem auto;
+}
+
+.section-padding {
+  padding: 4rem 1.5rem;
+}
+
+@keyframes fall {
+  0% {
+    transform: translateY(0) rotate(0deg) translateX(0);
+    opacity: 0;
+  }
+  10% { opacity: 1; }
+  50% { transform: translateY(50vh) rotate(180deg) translateX(30px); }
+  100% {
+    transform: translateY(110vh) rotate(360deg) translateX(-20px);
+    opacity: 0;
+  }
+}
