@@ -107,12 +107,12 @@ export default function Gallery() {
               className="relative w-full max-w-lg max-h-[85vh] aspect-auto"
               onClick={(e) => e.stopPropagation()}
             >
-              <img
+              <Image
                 src={selected}
                 alt="Selected"
                 width={600}
                 height={800}
-                unoptimized
+                sizes={800}
                 className="object-contain w-full h-full max-h-[85vh] rounded-xl"
               />
             </motion.div>
