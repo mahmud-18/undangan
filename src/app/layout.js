@@ -14,6 +14,11 @@ export default function RootLayout({ children }) {
   return (
     <html lang="id">
       <head>
+          <link
+          rel="shortcut icon"
+          href="/gallery/Icon.jpeg"
+          type="image/jpeg"
+        /> 
         <link rel="preconnect" href="https://fonts.googleapis.com" />
         <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="anonymous" />
         <link
